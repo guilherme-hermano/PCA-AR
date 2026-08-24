@@ -28,6 +28,8 @@ Antes da aplicação do PCA, a adequabilidade do conjunto de dados para reduçã
 - `pm10`: **0.70** | `pm1`: **0.66** | `intTemp`: **0.65** | `pm25`: **0.58** | `hum`: **0.55**
 - `NH3`: **0.50** | `CO`: **0.49** | `extTemp`: **0.48** | `Pres`: **0.47** | `NO2`: **0.39**
 
+![Matriz de Correlação](data/images/matriz_correlacao.png)
+
 ---
 
 ## Decomposição Espectral e Retenção de Componentes
@@ -48,6 +50,8 @@ Adotando o **Critério de Kaiser (Autovalor $\lambda > 1$)** e o **Scree Plot**,
 | PC10 | 0.0060 | 0.06% | 100.00% |
 
 > *Nota: Um modelo alternativo mais parcimonioso com 3 componentes retém 65.88% da variância.*
+
+![Scree Plot](data/images/scree_plot.png)
 
 ---
 
