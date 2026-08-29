@@ -105,9 +105,3 @@ jupyter notebook main_notebook.ipynb
 ```
 
 ---
-
-## A ser feito:
-
-- **Imputação de Dados Temporais:** Substituir o descarte de nulos (`dropna`) por interpolação de séries temporais ou `KNNImputer`, recuperando o histórico completo.
-- **Rotação Fatorial (Varimax):** Aplicar rotação ortogonal para refinar as cargas cruzadas entre gases e temperatura.
-- **Biplot e Agrupamento (Clustering):** Associar os resultados do PCA a algoritmos de clusterização (ex: K-Means) para categorização automática da qualidade do ar em faixas de risco.
