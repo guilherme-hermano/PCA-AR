@@ -73,9 +73,17 @@ Adotando o **Critério de Kaiser (Autovalor $\lambda > 1$)** e o **Scree Plot**,
 - Dominado por **`intTemp` (+0.51)** e **`extTemp` (+0.45)**.
 - Captura os ciclos de temperatura diurna/noturna e gradiente térmico entre os ambientes interno e externo.
 
+### Espaço das Cargas (Loadings Plot)
+Visualização da distribuição e correlações das variáveis originais nos diferentes planos formados pelas combinações de componentes principais:
+
+![Espaço das Cargas](data/images/espaco_cargas.png)
+
+### Biplot dos Componentes
+Projeção conjunta das observações e dos vetores de carga das variáveis, evidenciando o comportamento das amostras em relação aos eixos PC1 vs PC2 e PC1 vs PC3:
+
+![Biplot](data/images/biplot.png)
+
 ---
-
-
 
 ## Como Executar o Projeto
 
@@ -103,4 +111,4 @@ jupyter notebook main_notebook.ipynb
 - [ ] **Imputação de Dados Temporais:** Substituir o descarte de nulos (`dropna`) por interpolação de séries temporais ou `KNNImputer`, recuperando o histórico completo.
 - [ ] **Rotação Fatorial (Varimax):** Aplicar rotação ortogonal para refinar as cargas cruzadas entre gases e temperatura.
 - [ ] **Detecção de Anomalias:** Implementar a estatística $T^2$ de Hotelling e o erro de predição quadrático ($Q$-residuals) para alerta precoce de picos anômalos de poluição.
-- [ ] **Biplot e Agrupamento (Clustering):** Associar os resultados do PCA a algoritmos de clusterização (ex: K-Means) para categorização automática da qualidade do ar em faixas de risco.
+- [ ] **Agrupamento (Clustering):** Associar os resultados do PCA a algoritmos de clusterização (ex: K-Means) para categorização automática da qualidade do ar em faixas de risco.
