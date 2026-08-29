@@ -79,9 +79,36 @@ Visualização da distribuição e correlações das variáveis originais nos di
 ![Espaço das Cargas](data/images/espaco_cargas.png)
 
 ### Biplot dos Componentes
-Projeção conjunta das observações e dos vetores de carga das variáveis, evidenciando o comportamento das amostras em relação aos eixos PC1 vs PC2 e PC1 vs PC3:
+Projeção conjunta das observações e dos vetores de carga das variáveis nos 6 planos formados pelas 4 componentes principais:
 
 ![Biplot](data/images/biplot.png)
+
+**Síntese da Análise do Biplot:**
+- **Alinhamento dos Particulados:** Os vetores `pm1`, `pm25` e `pm10` projetam-se juntos na direção positiva de PC1, mostrando forte correlação e isolando momentos de alta poluição por poeira e fumaça.
+- **Relação Inversa Gases vs Umidade:** No eixo PC2, `CO` e `NH3` apontam em sentido oposto a `hum`, indicando acúmulo de poluentes gasosos em períodos de baixa umidade.
+- **Efeitos Térmicos e Barométricos:** `NO2` e `Pres` guiam a dispersão em PC3, enquanto `intTemp` e `extTemp` regem a separação ao longo de PC4.
+
+---
+
+## Agrupamento K-Means nas Componentes Principais
+
+Para segmentar os registros em regimes distintos de qualidade do ar e condições meteorológicas, aplicou-se o algoritmo **K-Means** sobre os escores dos 4 componentes principais.
+
+### Método do Cotovelo (Elbow Method)
+A análise da inércia (WCSS) para $k$ variando de 1 a 10 evidencia o ponto de inflexão na curva (*cotovelo*) em **$k = 4$**:
+
+![Elbow Plot](data/images/elbow_plot.png)
+
+### Distribuição dos Clusters nos Componentes (6 Pares)
+Projeção dos 4 clusters formados e seus respectivos centróides (marcados em `X`) ao longo de todos os pares de componentes principais:
+
+![K-Means Clusters](data/images/kmeans_clusters.png)
+
+**Síntese dos Perfis dos Clusters (k = 4):**
+- **Cluster 1 (Condições Quentes e Alta Pressão - ~28.1%):** Caracterizado por temperaturas elevadas (`intTemp` média de ~33.4°C) e estabilidade barométrica, com particulados em níveis moderados/baixos.
+- **Cluster 2 (Ar Seco e Emissão de Gases - ~39.6%):** Grupo majoritário marcado por baixa umidade média (~49.5%) e maiores concentrações médias de gases de combustão (`CO` e `NH3`).
+- **Cluster 3 (Pico Crítico de Material Particulado - ~12.3%):** Destaque extremo em PC1, concentrando médias de `pm10` e `pm25` até 4x maiores que os outros grupos.
+- **Cluster 4 (Alta Umidade e Ar Limpo - ~20.0%):** Apresenta umidade relativa elevada (~84.0%) e baixas concentrações de poluentes gasosos e particulados, típico de períodos chuvosos ou de lavagem atmosférica.
 
 ---
 
@@ -95,7 +122,7 @@ cd "C:\Users\Usuario\Desktop\PCA-AR"
 ### 2. Instalar as Dependências
 Recomenda-se utilizar um ambiente virtual (`.venv`):
 ```bash
-pip install numpy pandas matplotlib seaborn scikit-learn scipy factor-analyzer
+pip install numpy pandas matplotlib seaborn scikit-learn scipy factor-analyzer mpl-axes-aligner
 ```
 
 ### 3. Executar o Notebook
