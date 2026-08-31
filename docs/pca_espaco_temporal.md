@@ -80,15 +80,12 @@ Adotando o critério de **Autovalor $\lambda > 1$** e **Variância Explicada Ind
 ### Caracterização dos 3 Componentes:
 1. **PC1 (26.08%) – Gradiente Espacial e Microclimático:**
    - Altas correlações com `intTemp` (+0.74), `pm25` (+0.72), `Longitude` (+0.71), `Latitude` (-0.71), `extTemp` (+0.69) e `NO2` (+0.64).
-   - Demonstra a influência preponderante da localização geográfica sobre o aquecimento térmico local e a concentração de aerossóis finos e emissões fotoquímicas.
 
 2. **PC2 (20.36%) – Dinâmica Temporal e Particulados Inaláveis:**
    - Dominado por `pm10` (+0.70), `hum` (+0.56), `extTemp` (+0.48), `data_hora` (+0.47) e oposição com `Zona` (-0.48) e `NO2` (-0.47).
-   - Captura a progressão no tempo de partículas suspensas associadas a variações zonais e condições de umidade.
 
 3. **PC3 (16.61%) – Fator de Combustão e Fração Fina:**
    - Alta carga em `CO` (+0.69), `extTemp` (+0.51), `pm25` (+0.48), `pm1` (+0.46) e oposição marcante com `hum` (-0.60).
-   - Isola queimas e monóxido de carbono favorecidos por condições de ar seco e temperaturas elevadas.
 
 ---
 
