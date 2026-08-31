@@ -73,7 +73,7 @@ Adotando o **Critério de Kaiser (Autovalor $\lambda > 1$)** e o **Scree Plot**,
 - Dominado por **`intTemp` (+0.51)** e **`extTemp` (+0.45)**.
 - Captura os ciclos de temperatura diurna/noturna e gradiente térmico entre os ambientes interno e externo.
 
-### Espaço das Cargas (Loadings Plot)
+### Espaço das Cargas
 Visualização da distribuição e correlações das variáveis originais nos diferentes planos formados pelas combinações de componentes principais:
 
 ![Espaço das Cargas](data/images/espaco_cargas.png)
@@ -95,7 +95,7 @@ Projeção conjunta das observações e dos vetores de carga das variáveis nos 
 Para segmentar os registros em regimes distintos de qualidade do ar e condições meteorológicas, aplicou-se o algoritmo **K-Means** sobre os escores dos 4 componentes principais.
 
 ### Método do Cotovelo (Elbow Method)
-A análise da inércia (WCSS) para $k$ variando de 1 a 10 evidencia o ponto de inflexão na curva (*cotovelo*) em **$k = 4$**:
+Para $k$ variando de 1 a 10 evidencia o ponto de inflexão na curva em **$k = 4$**:
 
 ![Elbow Plot](data/images/elbow_plot.png)
 
@@ -104,11 +104,7 @@ Projeção dos 4 clusters formados e seus respectivos centróides (marcados em `
 
 ![K-Means Clusters](data/images/kmeans_clusters.png)
 
-**Síntese dos Perfis dos Clusters (k = 4):**
-- **Cluster 1 (Condições Quentes e Alta Pressão - ~28.1%):** Caracterizado por temperaturas elevadas (`intTemp` média de ~33.4°C) e estabilidade barométrica, com particulados em níveis moderados/baixos.
-- **Cluster 2 (Ar Seco e Emissão de Gases - ~39.6%):** Grupo majoritário marcado por baixa umidade média (~49.5%) e maiores concentrações médias de gases de combustão (`CO` e `NH3`).
-- **Cluster 3 (Pico Crítico de Material Particulado - ~12.3%):** Destaque extremo em PC1, concentrando médias de `pm10` e `pm25` até 4x maiores que os outros grupos.
-- **Cluster 4 (Alta Umidade e Ar Limpo - ~20.0%):** Apresenta umidade relativa elevada (~84.0%) e baixas concentrações de poluentes gasosos e particulados, típico de períodos chuvosos ou de lavagem atmosférica.
+Ao observar a PC4 em todas as análises, podemos observar resultados controversos. É necessário analisar possiblidade de remover essa componente.
 
 ---
 
