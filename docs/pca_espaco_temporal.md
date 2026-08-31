@@ -37,22 +37,22 @@ Total de registros processados após remoção de valores ausentes: **2.080.369 
 
 Adotando o critério de **Autovalor $\lambda > 1$** e **Variância Explicada Individual $> 10\%$**, foram retidos **3 Componentes Principais**, explicando **63,06% da variância total acumulada**:
 
-| Componente | Autovalor ($\lambda$) | % Variância Explicada | % Variância Acumulada | Status de Retenção |
-| :---: | :---: | :---: | :---: | :---: |
-| **PC1** | **3.6518** | **26.08%** | **26.08%** | Retido ($\lambda > 1$ e Var $> 10\%$) |
-| **PC2** | **2.8508** | **20.36%** | **46.45%** | Retido ($\lambda > 1$ e Var $> 10\%$) |
-| **PC3** | **2.3259** | **16.61%** | **63.06%** | Retido ($\lambda > 1$ e Var $> 10\%$) |
-| PC4 | 1.1928 | 8.52% | 71.58% | Descartado (Var $< 10\%$) |
-| PC5 | 1.0657 | 7.61% | 79.19% | Descartado (Var $< 10\%$) |
-| PC6 | 0.9196 | 6.57% | 85.76% | Descartado ($\lambda < 1$) |
-| PC7 | 0.6281 | 4.49% | 90.25% | Descartado ($\lambda < 1$) |
-| PC8 | 0.5396 | 3.85% | 94.10% | Descartado ($\lambda < 1$) |
-| PC9 | 0.3466 | 2.48% | 96.58% | Descartado ($\lambda < 1$) |
-| PC10 | 0.2736 | 1.95% | 98.53% | Descartado ($\lambda < 1$) |
-| PC11 | 0.0961 | 0.69% | 99.22% | Descartado ($\lambda < 1$) |
-| PC12 | 0.0671 | 0.48% | 99.70% | Descartado ($\lambda < 1$) |
-| PC13 | 0.0362 | 0.26% | 99.96% | Descartado ($\lambda < 1$) |
-| PC14 | 0.0060 | 0.04% | 100.00% | Descartado ($\lambda < 1$) |
+| Componente | Autovalor ($\lambda$) | % Variância Explicada | % Variância Acumulada |
+| :---: | :---: | :---: | :---: |
+| **PC1** | **3.6518** | **26.08%** | **26.08%** |
+| **PC2** | **2.8508** | **20.36%** | **46.45%** |
+| **PC3** | **2.3259** | **16.61%** | **63.06%** |
+| PC4 | 1.1928 | 8.52% | 71.58% |
+| PC5 | 1.0657 | 7.61% | 79.19% |
+| PC6 | 0.9196 | 6.57% | 85.76% |
+| PC7 | 0.6281 | 4.49% | 90.25% |
+| PC8 | 0.5396 | 3.85% | 94.10% |
+| PC9 | 0.3466 | 2.48% | 96.58% |
+| PC10 | 0.2736 | 1.95% | 98.53% |
+| PC11 | 0.0961 | 0.69% | 99.22% |
+| PC12 | 0.0671 | 0.48% | 99.70% |
+| PC13 | 0.0362 | 0.26% | 99.96% |
+| PC14 | 0.0060 | 0.04% | 100.00% |
 
 ![Scree Plot](images/scree_plot_st.png)
 
